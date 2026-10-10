@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Sistem_Management_Hotel.Models;
-
+//PurchaseRequest
 namespace Sistem_Management_Hotel.Controllers
 {
     public class PurchaseRequestsController : Controller

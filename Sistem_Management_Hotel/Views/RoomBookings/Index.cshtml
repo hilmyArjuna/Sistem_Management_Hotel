@@ -1,0 +1,119 @@
+﻿@model IEnumerable<Sistem_Management_Hotel.Models.RoomBooking>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KodeBooking)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TglCheckin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TglCheckout)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JumlahMalam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JumlahKamar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MetodeBayar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RefNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalBayar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Keterangan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedByNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Guest)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.KodeBooking)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TglCheckin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TglCheckout)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JumlahMalam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JumlahKamar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MetodeBayar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RefNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalBayar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Keterangan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedByNavigation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Guest.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
